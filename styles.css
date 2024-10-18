@@ -1,0 +1,148 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #fdf6e3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Notebook Container */
+.todo-container {
+    background-color: #fff;
+    width: 80%;
+    max-width: 500px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background: #f3e5f5;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+/* Notebook Lines */
+.todo-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    background: #f9f3d2;
+    border-bottom: 2px solid #eee;
+    border-left: 6px solid #f28b82;
+    border-radius: 3px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+/* Text part of the item */
+.todo-item span {
+    max-width: 70%;
+    word-wrap: break-word;
+    flex-grow: 1;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Checkbox */
+.todo-item input[type="checkbox"] {
+    margin-right: 15px;
+    width: 18px;
+    height: 18px;
+}
+
+/* Buttons for delete and reorder */
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Icons */
+button img {
+    width: 16px;
+    height: 16px;
+}
+
+.delete-btn img {
+    filter: invert(35%) sepia(60%) saturate(500%) hue-rotate(350deg) brightness(90%) contrast(90%);
+}
+
+.move-up img, .move-down img {
+    filter: invert(30%) sepia(55%) saturate(500%) hue-rotate(100deg) brightness(95%) contrast(95%);
+}
+
+.delete-btn:hover img {
+    filter: invert(35%) sepia(70%) saturate(800%) hue-rotate(350deg) brightness(100%) contrast(100%);
+}
+
+.move-up:hover img, .move-down:hover img {
+    filter: invert(40%) sepia(70%) saturate(600%) hue-rotate(120deg) brightness(100%) contrast(100%);
+}
+
+/* New Task Input */
+input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #fcf8e3;
+}
+
+/* Add Task Button */
+#add-task {
+    padding: 10px 15px;
+    background-color: #a5d6a7;
+    border: none;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#add-task:hover {
+    background-color: #81c784;
+}
+
+/* Completed Task */
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
